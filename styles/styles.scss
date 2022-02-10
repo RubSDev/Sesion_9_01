@@ -1,0 +1,229 @@
+$title-text: #0c3c5b;
+$text-color: #a5b2c6;
+$bg-section: #ebf4f7;
+$accent-color: #fab73f;
+$button-color: #d22030;
+$bg-white: #ffffff;
+$font: "Open Sans", sans-serif;
+$medium: 768px;
+
+body {
+  width: 100%;
+  font-family: $font;
+  margin: 0;
+
+  header {
+    background-image: url("/assets/bg-image.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 500px;
+    color: $bg-white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.3rem;
+
+    nav {
+      position: sticky;
+      flex-grow: 1;
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          letter-spacing: 0.1rem;
+
+          img {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 0;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+}
+
+main {
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    gap: 3rem;
+    color: $text-color;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: $title-text;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
+      span {
+        background-color: $accent-color;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $bg-white;
+        font-weight: 500;
+      }
+    }
+    h2 {
+      color: $title-text;
+      margin: 0;
+    }
+    #containerNumbers {
+      gap: 3rem;
+    }
+  }
+  #containerFind {
+    background-color: $bg-section;
+    gap: 1rem;
+  }
+}
+
+button {
+  background-color: $button-color;
+  border: none;
+  padding: 1rem 2.5rem;
+  color: $bg-white;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  width: 250px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  color: $text-color;
+  font-size: 0.8rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h6 {
+      color: $title-text;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      margin: 0;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    header {
+      background-image: url("/assets/bg-image-desktop.jpeg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding-left: 6rem;
+      padding-bottom: 10rem;
+      gap: 2rem;
+
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        width: 50%;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  main {
+    padding: 2rem 8rem;
+
+    section {
+      display: flex;
+      flex-direction: row;
+      padding: 4rem 2rem;
+      gap: 3rem;
+      color: $text-color;
+
+      #containerNumbers {
+        flex-direction: row;
+        gap: 3rem;
+
+        div {
+          align-items: center;
+          justify-content: space-between;
+          text-align: center;
+          width: 33.3%;
+        }
+      }
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #containerFind {
+      background-color: $bg-section;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 8rem;
+    row-gap: 4rem;
+    width: 75%;
+
+    & > div {
+      width: 33.3%;
+    }
+  }
+}
